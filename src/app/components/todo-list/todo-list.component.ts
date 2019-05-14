@@ -3,6 +3,7 @@ import { Store } from '@ngrx/store';
 import { State, selectTodoListItems } from './reducers';
 import { Observable } from 'rxjs';
 import { TodoListItem } from './models';
+import { AddedItem, CompletedItem } from './actions/list.actions';
 
 @Component({
   selector: 'app-todo-list',
@@ -19,8 +20,12 @@ export class TodoListComponent implements OnInit {
   }
 
   add(item: HTMLInputElement) {
-    console.log('adding ', item.value); // dispatch here!
+    this.store.dispatch(new AddedItem(item.value));
     item.value = '';
     item.focus();
+  }
+
+  complete(item: TodoListItem) {
+    this.store.dispatch(new CompletedItem(item));
   }
 }
