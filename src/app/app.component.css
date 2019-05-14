@@ -1,0 +1,12 @@
+#first {
+  color: green;
+}
+
+.pretty {
+  color: purple;
+  background-color: gold;
+}
+
+[data-jeff] {
+  font-size: 8em;
+}
