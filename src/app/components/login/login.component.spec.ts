@@ -32,12 +32,7 @@ describe('the login component', () => {
     it('should display the logged in message', () => {
       expect(elMessage.textContent).toBe('Welcome, Ben Solo');
     });
-    it('has the list', () => {
 
-    });
-    it('formats the entries correctly', () => {
-
-    });
 
   });
   describe('with a non-logged in user', () => {
